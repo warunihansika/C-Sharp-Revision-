@@ -21,7 +21,8 @@ namespace practice123
         private void Button1_Click(object sender, EventArgs e)
         {
             // get the input from text boxes 
-            string u_name = textBox1.Text;
+            string f_name = textBox1.Text;
+            string l_name = textBox5.Text;
             string email = textBox2.Text;
             string password = textBox3.Text;
             int by = int.Parse(textBox4.Text);
@@ -38,7 +39,7 @@ namespace practice123
             using (var connection = DB.GetConnection())
             {
                 //insert value to the data base
-                string qry = "insert into alluser values('" + u_name + "','" + email + "','" + password + "','" + value + "','" + by + "')";
+                string qry = "insert into alluser values('" + f_name + "','" + l_name + "','" + email + "','" + password + "','" + value + "','" + by + "')";
                 SqlCommand cmd = new SqlCommand(qry, connection);
                 try {
                     connection.Open();
